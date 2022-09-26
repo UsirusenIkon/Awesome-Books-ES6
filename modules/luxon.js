@@ -7075,4 +7075,3 @@
  const VERSION = "3.0.4";
  
  export { DateTime, Duration, FixedOffsetZone, IANAZone, Info, Interval, InvalidZone, Settings, SystemZone, VERSION, Zone };
- //# sourceMappingURL=luxon.js.map

@@ -7,28 +7,27 @@ const submit = document.querySelector('.submit');
 const title = document.querySelector('.title');
 const author = document.querySelector('.author');
 
-
 const initialBook = new StandardBooks();
 initialBook.addBook('title1', 'author1');
 initialBook.addBook('title2', 'author2');
 initialBook.addBook('title3', 'author3');
 
-let getData = () => {
+const getData = () => {
   const localdata = localStorage.getItem('localdata');
   const dataStored = JSON.parse(localdata);
   if (dataStored) {
     initialBook.books = dataStored;
   }
-}
+};
 
 getData();
 
-let updateLocalStorage = () => {
+const updateLocalStorage = () => {
   const localdata = JSON.stringify(initialBook.books);
   localStorage.setItem('localdata', localdata);
-}
+};
 
-let displayBook = () => {
+const displayBook = () => {
   bookList.innerText = '';
   initialBook.allBooks().forEach((standBook) => {
     const containerTAB = document.createElement('div');
@@ -67,7 +66,7 @@ let displayBook = () => {
     });
   });
   updateLocalStorage();
-}
+};
 loadDate();
 displayBook();
 

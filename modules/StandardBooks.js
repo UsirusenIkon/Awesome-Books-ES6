@@ -11,9 +11,7 @@ export default class StandardBooks {
     return p;
   }
 
-  allBooks = () => {
-    return this.books;
-  }
+  allBooks = () => this.books
 
   removeBook = (index) => {
     this.books.splice(index, 1);
